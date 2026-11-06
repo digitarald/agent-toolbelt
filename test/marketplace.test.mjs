@@ -218,7 +218,7 @@ test("a relocated copy discovers the bundled MCP tools without this checkout's n
   const directory = await mkdtemp(join(tmpdir(), "starter copied template "));
   try {
     await cp(join(root, "marketplace.json"), join(directory, "marketplace.json"));
-    await cp(join(root, "plugins"), join(directory, "plugins"), { recursive: true });
+    if (existsSync(join(root, "plugins"))) await cp(join(root, "plugins"), join(directory, "plugins"), { recursive: true });
     const original = await discoverAssets();
     const assets = await discoverAssets(directory);
     assert.deepEqual(assets.map((asset) => asset.id), original.map((asset) => asset.id));
@@ -256,7 +256,7 @@ test("generated bundles are identical with a relocated node_modules, and orphane
     await unlink(join(directory, "node_modules")).catch(() => {});
     await rm(directory, { recursive: true, force: true });
   });
-  await cp(join(root, "plugins"), join(directory, "plugins"), { recursive: true, filter: (path) => !/[\\/]dist(?:[\\/]|$)/.test(path) });
+  if (existsSync(join(root, "plugins"))) await cp(join(root, "plugins"), join(directory, "plugins"), { recursive: true, filter: (path) => !/[\\/]dist(?:[\\/]|$)/.test(path) });
   if (existsSync(join(root, "evals/graders/src"))) await cp(join(root, "evals/graders/src"), join(directory, "evals/graders/src"), { recursive: true });
   await cp(join(root, "tsconfig.json"), join(directory, "tsconfig.json"));
   await symlink(resolve(root, "node_modules"), join(directory, "node_modules"), "junction");
