@@ -1,10 +1,12 @@
 {
-  "name": "plugin-marketplace-starter",
+  "name": "agent-toolbelt",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-  "engines": { "node": ">=22.14.0" },
+  "engines": {
+    "node": ">=22.14.0"
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
     "build:check": "node scripts/build.mjs --check",
@@ -34,5 +36,9 @@
     "typescript": "7.0.2",
     "yaml": "2.9.1",
     "zod": "4.6.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitarald/agent-toolbelt"
   }
 }

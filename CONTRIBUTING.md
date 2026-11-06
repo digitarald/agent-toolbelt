@@ -14,6 +14,10 @@ project you agree to abide by its terms.
 
 ## Before you start
 
+- This is a personal marketplace maintained by `@digitarald`. Start rough
+  experiments in [Agent Parts Bin](https://github.com/digitarald/agent-parts-bin).
+  Plugins here need a useful workflow, documented limitations, behavioral
+  evals, and records of the host checks and eval runs actually completed.
 - Install Node.js 22.14 or newer and run `npm ci`.
 - Open an issue with the **New plugin** form before building a new plugin, so
   reviewers can agree on scope and risk first.
@@ -55,9 +59,6 @@ Change these together in one pull request:
    Name support files after the plugin, such as `test/<name>-hook.test.mjs` and
    `evals/graders/<name>.mjs`, so `npm run remove-plugin` removes them with it.
 7. **Related docs**: the plugin's README, and
-   <!-- examples -->
-   for a shipped example, its section in [Examples](docs/examples.md), and
-   <!-- /examples -->
    anything else that describes what you changed. Don't hard-code suite sizes;
    `npm run eval:check` prints them.
 8. **Generated files**: if you changed `plugins/*/src/` or `evals/graders/src/`,

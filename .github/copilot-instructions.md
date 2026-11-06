@@ -1,5 +1,9 @@
 # Copilot instructions
 
+Agent Toolbelt is `@digitarald`'s curated marketplace. Keep claims of usefulness
+grounded in recorded behavior and host checks. Experiments belong in
+`digitarald/agent-parts-bin`.
+
 This repository is a marketplace of Copilot plugins. Before changing anything,
 read [AGENTS.md](../AGENTS.md) for the maintenance rules and
 [CONTRIBUTING.md](../CONTRIBUTING.md) for the change checklist.

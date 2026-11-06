@@ -1,5 +1,5 @@
 name: New plugin
-description: Propose a plugin for this marketplace before building it.
+description: Propose a useful plugin for digitarald's curated toolbelt.
 title: "New plugin: "
 body:
   - type: markdown

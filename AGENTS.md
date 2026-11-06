@@ -7,6 +7,10 @@ place; don't duplicate them here.
 
 ## Agent-specific rules
 
+- This is a personal, curated marketplace maintained by `@digitarald`.
+  Rough experiments belong in `digitarald/agent-parts-bin`. Keep real
+  behavioral evals and host-check records for plugins published here; never
+  present static validation or unrun eval definitions as evidence they work.
 - Scaffold a plugin with `npm run new-plugin -- <name>` (with `--with agent`,
   `mcp`, `hook`, or `extension`, and `--no-skill` when it has no skill), remove
   one with `npm run remove-plugin -- <name>` (`remove-example` for the shipped
